@@ -1,56 +1,56 @@
 package anaconda
 
 type UrlEntity struct {
-	display_url   string  `json:"display_url"`
-	Expanded_url  string  `json:"expanded_url"`
-	Indices       []int   `json:"indices"`
-	Url           string  `json:"url"`
+	display_url   string  `json:"display_url,omitempty"`
+	Expanded_url  string  `json:"expanded_url,omitempty"`
+	Indices       []int   `json:"indices,omitempty"`
+	Url           string  `json:"url,omitempty"`
 }
 
 type Hashtags struct {
-	Indices []int   `json:"indices"`
-	Text    string  `json:"text"`
+	Indices []int   `json:"indices,omitempty"`
+	Text    string  `json:"text,omitempty"`
 }
 
 type UserMentionsEntity struct {
-	Id          int64    `json:"id"`
-	Id_str      string   `json:"id_str"`
-	Indices     []int    `json:"indices"`
-	Name        string   `json:"name"`
-	Screen_name string   `json:"screen_name"`
+	Id          int64    `json:"id,omitempty"`
+	Id_str      string   `json:"id_str,omitempty"`
+	Indices     []int    `json:"indices,omitempty"`
+	Name        string   `json:"name,omitempty"`
+	Screen_name string   `json:"screen_name,omitempty"`
 }
 
 type MediaEntity struct {
-	Display_url           string        `json:"display_url"`
-	Expanded_url          string        `json:"expanded_url"`
-	Id                    int64         `json:"id"`
-	Id_str                string        `json:"id_str"`
-	Indices               []int         `json:"indices"`
-	Media_url             string        `json:"media_url"`
-	Media_url_https       string        `json:"media_url_https"`
-	Sizes                 MediaSizes    `json:"sizes"`
-	Source_status_id      int64         `json:"source_status_id"`
-	Source_status_id_str  int64         `json:"source_status_id"`
-	Type                  string        `json:"type"`
-	Url                   string        `json:"url"`
+	Display_url           string        `json:"display_url,omitempty"`
+	Expanded_url          string        `json:"expanded_url,omitempty"`
+	Id                    int64         `json:"id,omitempty"`
+	Id_str                string        `json:"id_str,omitempty"`
+	Indices               []int         `json:"indices,omitempty"`
+	Media_url             string        `json:"media_url,omitempty"`
+	Media_url_https       string        `json:"media_url_https,omitempty"`
+	Sizes                 MediaSizes    `json:"sizes,omitempty"`
+	Source_status_id      int64         `json:"source_status_id,omitempty"`
+	Source_status_id_str  int64         `json:"source_status_id,omitempty"`
+	Type                  string        `json:"type,omitempty"`
+	Url                   string        `json:"url,omitempty"`
 }
 
 type MediaSizes struct {
-	Thumb   MediaSize    `json:"thumb"`
-	Large   MediaSize    `json:"large"`
-	Medium  MediaSize    `json:"medium"`
-	Small   MediaSize    `json:"small"`
+	Thumb   MediaSize    `json:"thumb,omitempty"`
+	Large   MediaSize    `json:"large,omitempty"`
+	Medium  MediaSize    `json:"medium,omitempty"`
+	Small   MediaSize    `json:"small,omitempty"`
 }
 
 type MediaSize struct {
-	H        int      `json:"h"`
-	Resize   string   `json:"resize"`
-	W        int      `json:"w"`
+	H        int      `json:"h,omitempty"`
+	Resize   string   `json:"resize,omitempty"`
+	W        int      `json:"w,omitempty"`
 }
 
 type Entities struct {
-	Hashtags      []Hashtags             `json:"hashtags"`
-	Media         []MediaEntity          `json:"media"`
-	Urls          []UrlEntity            `json:"urls"`
-	User_mentions []UserMentionsEntity   `json:"user_mentions"`
+	Hashtags      []Hashtags             `json:"hashtags,omitempty"`
+	Media         []MediaEntity          `json:"media,omitempty"`
+	Urls          []UrlEntity            `json:"urls,omitempty"`
+	User_mentions []UserMentionsEntity   `json:"user_mentions,omitempty"`
 }
